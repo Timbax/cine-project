@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import StarRating from "./StarRating";
 
-const tempMovieData = [
+/* const tempMovieData = [
   {
     imdbID: "tt1375666",
     Title: "Inception",
@@ -46,7 +46,7 @@ const tempWatchedData = [
     imdbRating: 8.5,
     userRating: 9,
   },
-];
+]; */
 
 const average = (arr) =>
   arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
@@ -100,7 +100,6 @@ export default function App() {
     function () {
       async function fetchMovies() {
         /*  USO DE LA API NATIVA DEL NAVEGADOR "ABORT CONTROLLER" (DETIENE EL EXCESO DE PETICIONES) */
-        const controller = new AbortController();
         try {
           setIsLoading(true);
           setError("");
